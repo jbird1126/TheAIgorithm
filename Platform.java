@@ -87,9 +87,13 @@ public class SourceCode
           {
           System.out.println("Successfully downloaded files to " + location);
           }
-          System.out.println("Size Before Compression: " + userTyped + " bytes");
+          if(percentComplete % 2 == 0 && percentComplete % 5 == 0)
+              System.out.println("Package Status: Retained");
+          else
+              System.out.println("Package Status: Constructed Using Correct Prediction");
+          System.out.println(">>Size Before Compression: " + userTyped + " bytes");
         //  System.out.println("Random Percent: " + randomPercent);
-          System.out.println("Size After Compression: " + (int)(fileLength * randomPercent) + " bytes");
+          System.out.println(">>Size After Compression: " + (int)(fileLength * randomPercent) + " bytes");
           if(location == null)
           {
           System.out.println("Successfully downloaded files");
@@ -98,5 +102,6 @@ public class SourceCode
       }
   }
 }
+
 //oh boy it compiles. oh boy it executes. oh boy it C O M P R E S S E S
 /*  https://www.jdoodle.com/online-java-compiler  */
