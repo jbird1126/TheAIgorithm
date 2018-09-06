@@ -39,7 +39,7 @@ public class SourceCode
       location = sc.next();
       File userFile = new File(location);
       fileLength = userFile.length();
-      //fileLength = (location.length()*1000);
+      fileLength = (location.length()*1000);
     }
 
     System.out.println("Downloading and implementing The Algorithm...");
@@ -91,7 +91,7 @@ public class SourceCode
               System.out.println("Package Status: Retained");
           else
               System.out.println("Package Status: Constructed Using Correct Prediction");
-          System.out.println(">>Size Before Compression: " + userTyped + " bytes");
+          System.out.println(">>Size Before Compression: " + (int)(fileLength) + " bytes");
         //  System.out.println("Random Percent: " + randomPercent);
           System.out.println(">>Size After Compression: " + (int)(fileLength * randomPercent) + " bytes");
           if(location == null)
